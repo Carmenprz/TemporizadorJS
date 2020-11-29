@@ -1,19 +1,56 @@
 "use strict"; 
 
-    
-let second = 0; 
+
 let minute = 0; 
+let second = 0; 
+let millisecond = 0; 
+let timerInterval; 
+let showMinuteId = document.querySelector("#showMinutes");
+let showMinute = () => {showMinuteId.innerHTML=`${minute}`}; 
+let showSecondId = document.querySelector("#showSeconds");
+let showSecond = () => {showSecondId.innerHTML=`${second}`}; 
+let showMillisecondId = document.querySelector("#showMilliseconds");
+let showMillisecond = () => {showMillisecondId.innerHTML=`${millisecond}`}; 
+
+setInterval(showMinute, 20);
+setInterval(showSecond, 20);
+setInterval(showMillisecond, 20);
+
+function startTimer() 
+    {
+        timerInterval = setInterval(timer, 10);
+    }
 
 function timer()
     {
-        second ++; 
-        if (second > 59)
+        millisecond ++; 
+        if (millisecond > 99)
             {
-                second = 0; 
-                minute ++; 
+                millisecond = 0; 
+                second ++; 
             }
-        console.log(minute, second); 
+
+        if (second > 59)
+        {
+            second = 0; 
+            minute ++; 
+        }
+        console.log(minute, second, millisecond); 
     }
 
 
-setInterval(timer, 1000); 
+function stopTimer() 
+    {
+        clearInterval(timerInterval); 
+    }
+
+function restart()
+    {
+        second = 0; 
+        minute = 0; 
+    }
+
+
+document.querySelector("#reiniciar").addEventListener("click", restart); 
+document.querySelector("#iniciar").addEventListener("click", startTimer); 
+// document.querySelector("#parar").addEventListener("click", stopTimer()); 
