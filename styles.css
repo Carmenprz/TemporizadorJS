@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+* {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+border: none;
+outline: none;
+background: transparent;
+vertical-align: baseline;
+box-sizing: border-box;
+}
+
 html,body{
     background-color: black;
 }
@@ -19,6 +31,10 @@ body {
     color: #B5E7CC; 
 }
 
+main {
+    padding: 100px; 
+}
+
 #btnGroup {
     display: flex;
     flex-direction: row-reverse; 
@@ -30,6 +46,7 @@ body {
 .btn {
     font-family: 'Roboto', sans-serif;
     background-color: black; 
+    border: 1px solid;
     border-color: #B5E7CC; 
     color: #B5E7CC; 
     width: 140px;
@@ -39,23 +56,17 @@ body {
 
 #showResult{
     font-size: 200px; 
-    height: 180px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(5, 150px);
+    justify-content: end;
+    column-gap: 2px;
     text-align: center;
-    /* align-content: center; */
-    /* position: fixed;  */
-    /* justify-items: center; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* margin: 15px; 
-    padding: 20px;  */
-    /* width: 80%; */
+    width: 100%;
 }
 
-.numbers {
-    height: 180px; 
-    width: 180px;
-    padding: 20px; 
+/* .little {
+    font-size: 100px;
+    align-self: end; 
+    justify-self: center; 
 }
-
+ */
