@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html,body{
+    background-color: black;
+}
+
+header {
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #B5E7CC; 
+}
+
+#btnGroup {
+    display: flex;
+    flex-direction: row-reverse; 
+    margin: 20px; 
+    align-items: space-between;
+    
+}
+
+.btn {
+    font-family: 'Roboto', sans-serif;
+    background-color: black; 
+    border-color: #B5E7CC; 
+    color: #B5E7CC; 
+    width: 140px;
+    height: 60px;
+    font-size: 24px;
+}
+
+#showResult{
+    font-size: 200px; 
+    height: 180px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    text-align: center;
+    /* align-content: center; */
+    /* position: fixed;  */
+    /* justify-items: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin: 15px; 
+    padding: 20px;  */
+    /* width: 80%; */
+}
+
+.numbers {
+    height: 180px; 
+    width: 180px;
+    padding: 20px; 
+}
+
