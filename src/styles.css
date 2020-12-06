@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+
 * {
 margin: 0;
 padding: 0;
@@ -18,12 +19,13 @@ html,body{
 }
 
 header {
-    font-size: 96px;
+    font-size: clamp(40px, 15vw, 96px);
     font-style: normal;
     font-weight: 400;
     line-height: 128px;
     letter-spacing: 0em;
     text-align: left;
+    margin: 30px; 
 }
 
 body {
@@ -43,6 +45,12 @@ main {
     
 }
 
+#parar {
+    background-color: #B5E7CC;
+    color: black; 
+    border-color: black; 
+}
+
 .btn {
     font-family: 'Roboto', sans-serif;
     background-color: black; 
@@ -52,21 +60,15 @@ main {
     width: 140px;
     height: 60px;
     font-size: 24px;
+    margin: 10px; 
 }
 
 #showResult{
-    font-size: 200px; 
+    font-size: clamp(40px, 50vw, 200px);
     display: grid;
-    grid-template-columns: repeat(5, 150px);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 5fr));
     justify-content: end;
-    column-gap: 2px;
     text-align: center;
-    width: 100%;
-}
-
-/* .little {
-    font-size: 100px;
-    align-self: end; 
-    justify-self: center; 
-}
- */
+    width: 80%; 
+    /* padding-left: 200px; */
+} 
