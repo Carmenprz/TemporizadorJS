@@ -12,3 +12,7 @@ Debemos desarrollar una mini aplicación parecida a un cronómetro, cuenta atrá
 
 Manejar el tiempo en Javascript
 Crear una interface en HTML y CSS
+
+## Github Pages:
+
+https://carmenprz.github.io/TemporizadorJS/
